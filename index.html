@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section class="cover" id="cover">
+    <div class="cover-card">
+      <p class="eyebrow">With joyful hearts</p>
+      <p class="cover-invitation">You are warmly invited to celebrate</p>
+      <h1>Our Wedding</h1>
+      <p class="cover-names" id="cover-names">Partner One &amp; Partner Two</p>
+      <p class="cover-date" id="cover-date">Wedding date will go here</p>
+      <button id="open-button">Open your invitation <span aria-hidden="true">↓</span></button>
+    </div>
+  </section>
+
+  <main id="invitation" hidden>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Together with their families</p>
+        <p class="hero-intro">We joyfully invite you to celebrate the wedding of</p>
+        <h1 id="couple-names">Partner One &amp; Partner Two</h1>
+        <span class="hero-divider" aria-hidden="true"></span>
+        <p class="hero-date" id="wedding-date">Wedding date will go here</p>
+      </div>
+    </header>
+<section class="section" id="couple">
+  <p class="eyebrow">Two lives, one celebration</p>
+  <h2>Meet the Couple</h2>
+  <div class="couple-grid">
+    <article>
+      <p class="eyebrow">The Bride</p>
+      <h3 id="bride-name">Bride name</h3>
+    </article>
+    <article>
+      <p class="eyebrow">The Groom</p>
+      <h3 id="groom-name">Groom name</h3>
+    </article>
+  </div>
+</section>
+    <section class="section" id="events">
+      <p class="eyebrow">A few days of joy</p>
+      <h2>Wedding Celebrations</h2>
+      <p class="section-intro">Join us for every special moment.</p>
+      <div id="events-list"></div>
+    </section>
+
+    <section class="section" id="families">
+      <p class="eyebrow">Two families, one celebration</p>
+      <h2>With Their Families</h2>
+      <div id="families-list"></div>
+    </section>
+
+    <section class="section" id="venue">
+      <p class="eyebrow">Save the location</p>
+      <h2>The Venue</h2>
+      <div class="venue-card">
+        <span class="venue-mark" aria-hidden="true">⌖</span>
+        <h3 id="venue-name">Venue name will go here</h3>
+        <p id="venue-address">Venue address will go here</p>
+        <a id="map-link" href="#" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="venue-card">
+        <span class="venue-mark" aria-hidden="true">⌖</span>
+        <h3 id="reception-venue-name">Reception venue name will go here</h3>
+        <p id="reception-venue-address">Reception venue address will go here</p>
+        <a id="reception-map-link" href="#" target="_blank" rel="noopener noreferrer">View on map <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-flourish" aria-hidden="true"></span>
+      <p>We cannot wait to celebrate with you.</p>
+      <p id="footer-names">Partner One &amp; Partner Two</p>
+    </footer>
+  </main>
+</body>
+</html>
