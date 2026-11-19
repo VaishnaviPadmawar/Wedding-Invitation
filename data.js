@@ -20,32 +20,38 @@ window.WEDDINGS = {
       {
         name: "Groom's Entry",
         date: "19 January",
-        time: "4:30 pm onwards"
+        time: "4:30 pm onwards",
+        venue: "venue"
       },
       {
         name: "Sangeet",
         date: "19 January",
-        time: "6:00 pm onwards"
+        time: "6:00 pm onwards",
+        venue: "venue"
       },
       {
         name: "Wedding begins",
         date: "20 January",
-        time: "7:00 am"
+        time: "7:00 am",
+        venue: "venue"
       },
       {
         name: "Muhurtham",
         date: "20 January",
-        time: "10:15 am"
+        time: "10:15 am",
+        venue: "venue"
       },
       {
         name: "Nalangu",
         date: "20 January",
-        time: "3:30 pm"
+        time: "3:30 pm",
+        venue: "venue"
       },
       {
         name: "Reception",
         date: "23 January",
-        time: "6:00 pm onwards"
+        time: "6:00 pm onwards",
+        venue: "receptionVenue"
       }
     ],
 

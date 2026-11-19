@@ -32,12 +32,17 @@ document.querySelector("#families-list").innerHTML =
   `).join("");
 
 document.querySelector("#events-list").innerHTML =
-  wedding.events.map(event => `
-    <article>
-      <h3>${event.name}</h3>
-      <p>${event.date} · ${event.time}</p>
-    </article>
-  `).join("");
+  wedding.events.map(event => {
+    const venue = wedding[event.venue];
+    return `
+      <article>
+        <h3>${event.name}</h3>
+        <p>${event.date} · ${event.time}</p>
+        <p class="event-venue">${venue.name}</p>
+        <a class="event-map-link" href="${venue.mapUrl}" target="_blank" rel="noopener noreferrer">View venue on map <span aria-hidden="true">↗</span></a>
+      </article>
+    `;
+  }).join("");
 
 const openButton = document.querySelector("#open-button");
 const cover = document.querySelector("#cover");

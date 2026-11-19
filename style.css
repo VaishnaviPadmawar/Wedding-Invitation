@@ -300,6 +300,19 @@ article p {
   color: var(--muted);
 }
 
+.event-venue {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.event-map-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--rose-dark);
+  font-size: .85rem;
+  text-underline-offset: 3px;
+}
+
 #families {
   width: 100%;
   max-width: none;
