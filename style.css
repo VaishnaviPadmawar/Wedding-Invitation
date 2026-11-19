@@ -1,13 +1,14 @@
 :root {
   color-scheme: light;
-  --ink: #41352f;
-  --muted: #82736a;
-  --rose: #a45e56;
-  --rose-dark: #75443e;
-  --gold: #b38c58;
-  --paper: #fcf8f1;
-  --paper-deep: #f3e8d9;
-  --white: #fffdf9;
+  --ink: #5b1a20;
+  --muted: #7d6261;
+  --rose: #8a2630;
+  --rose-dark: #5b1a20;
+  --gold: #c9a24e;
+  --gold-light: #dbbd83;
+  --paper: #f7f0e3;
+  --paper-deep: #eee1ca;
+  --white: #fffaf2;
 }
 
 * {
@@ -35,24 +36,25 @@ body {
   place-items: center;
   overflow: hidden;
   padding: 40px 24px;
+  color: var(--paper);
   background:
-    radial-gradient(ellipse at 12% 18%, rgba(255, 255, 255, .8), transparent 28%),
-    radial-gradient(ellipse at 88% 82%, rgba(190, 143, 111, .18), transparent 31%),
-    linear-gradient(135deg, #f8eee3, #f2e2d3 55%, #f8efe5);
+    radial-gradient(ellipse at 12% 18%, rgba(201, 162, 78, .12), transparent 28%),
+    radial-gradient(ellipse at 88% 82%, rgba(219, 189, 131, .10), transparent 31%),
+    var(--rose-dark);
 }
 
 .cover::before,
 .cover::after {
   position: absolute;
   inset: 18px;
-  border: 1px solid rgba(147, 106, 77, .35);
+  border: 1px solid rgba(219, 189, 131, .48);
   content: "";
   pointer-events: none;
 }
 
 .cover::after {
   inset: 26px;
-  border-color: rgba(255, 255, 255, .7);
+  border-color: rgba(247, 240, 227, .55);
 }
 
 .cover-card {
@@ -86,14 +88,14 @@ body {
 
 .cover-invitation {
   margin: 4px 0 2px;
-  color: var(--muted);
+  color: var(--paper);
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-style: italic;
 }
 
 .cover h1 {
   margin: 0;
-  color: var(--rose-dark);
+  color: var(--gold-light);
   font-size: clamp(3rem, 9vw, 5.8rem);
   font-weight: 400;
   letter-spacing: -.055em;
@@ -102,14 +104,15 @@ body {
 
 .cover-names {
   margin: 24px 0 2px;
-  color: var(--ink);
+  color: var(--paper);
   font-size: clamp(1.7rem, 5vw, 2.7rem);
   font-style: italic;
+  font-family: "Segoe Script", "Brush Script MT", cursive;
 }
 
 .cover-date {
   margin: 0 0 30px;
-  color: var(--muted);
+  color: var(--gold-light);
   font-family: Arial, Helvetica, sans-serif;
   font-size: .9rem;
   letter-spacing: .12em;
@@ -122,10 +125,10 @@ button {
   gap: 12px;
   min-height: 50px;
   padding: 12px 25px;
-  border: 1px solid var(--rose-dark);
+  border: 1px solid var(--gold);
   border-radius: 2px;
-  color: var(--white);
-  background: var(--rose-dark);
+  color: var(--rose-dark);
+  background: var(--gold-light);
   font-family: Arial, Helvetica, sans-serif;
   font-size: .76rem;
   letter-spacing: .12em;
@@ -135,7 +138,7 @@ button {
 }
 
 button:hover {
-  color: var(--rose-dark);
+  color: var(--gold-light);
   background: transparent;
   transform: translateY(-2px);
 }
@@ -155,8 +158,8 @@ a:focus-visible {
   overflow: hidden;
   padding: 80px 24px;
   background:
-    radial-gradient(ellipse at 50% 120%, rgba(179, 140, 88, .18), transparent 52%),
-    linear-gradient(180deg, #f8efe5, #fbf8f1);
+    radial-gradient(ellipse at 50% 120%, rgba(201, 162, 78, .16), transparent 52%),
+    var(--rose-dark);
 }
 
 .hero::before,
@@ -189,14 +192,14 @@ a:focus-visible {
 
 .hero-intro {
   margin: 26px 0 4px;
-  color: var(--muted);
+  color: var(--paper);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-style: italic;
 }
 
 .hero h1 {
   margin: 4px 0 0;
-  color: var(--rose-dark);
+  color: var(--gold-light);
   font-size: clamp(3rem, 10vw, 6.5rem);
   font-weight: 400;
   letter-spacing: -.06em;
@@ -211,7 +214,7 @@ a:focus-visible {
 
 .hero-date {
   margin: 0;
-  color: var(--ink);
+  color: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   font-size: .88rem;
   letter-spacing: .16em;
@@ -241,7 +244,7 @@ a:focus-visible {
 #couple {
   width: 100%;
   max-width: none;
-  background: #f5ede3;
+  background: var(--paper-deep);
 }
 
 .couple-grid {
@@ -278,7 +281,7 @@ article {
   max-width: none;
   margin: 0;
   padding: 28px;
-  border: 1px solid #eadfce;
+  border: 1px solid #e2cfaa;
   border-top: 3px solid var(--gold);
   border-radius: 2px 2px 12px 12px;
   background: var(--white);
@@ -300,7 +303,7 @@ article p {
 #families {
   width: 100%;
   max-width: none;
-  background: #f5ede3;
+  background: var(--paper-deep);
 }
 
 #families > .eyebrow,
@@ -324,10 +327,10 @@ article p {
   max-width: 660px;
   margin: 34px auto 0;
   padding: clamp(28px, 6vw, 54px);
-  border: 1px solid #e5d6c3;
+  border: 1px solid #dfcba2;
   background:
-    linear-gradient(rgba(255, 253, 249, .92), rgba(255, 253, 249, .92)),
-    radial-gradient(ellipse at 50% 0, #dfc5a5, transparent 70%);
+    linear-gradient(rgba(255, 250, 242, .94), rgba(255, 250, 242, .94)),
+    radial-gradient(ellipse at 50% 0, var(--gold-light), transparent 70%);
 }
 
 .venue-mark {
@@ -361,12 +364,12 @@ article p {
 
 .footer {
   padding: 50px 24px;
-  color: #f9f1e7;
+  color: var(--paper);
   background: var(--rose-dark);
 }
 
 .footer-flourish {
-  color: #e3c28c;
+  color: var(--gold-light);
 }
 
 .footer p {
@@ -374,7 +377,7 @@ article p {
 }
 
 #footer-names {
-  color: #e3c28c;
+  color: var(--gold-light);
   font-size: 1.5rem;
   font-style: italic;
 }

@@ -25,7 +25,7 @@ window.WEDDINGS = {
       {
         name: "Sangeet",
         date: "19 January",
-        time: "7:00 pm onwards"
+        time: "6:00 pm onwards"
       },
       {
         name: "Wedding begins",
@@ -41,6 +41,11 @@ window.WEDDINGS = {
         name: "Nalangu",
         date: "20 January",
         time: "3:30 pm"
+      },
+      {
+        name: "Reception",
+        date: "23 January",
+        time: "6:00 pm onwards"
       }
     ],
 
