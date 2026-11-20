@@ -1,6 +1,6 @@
 window.WEDDINGS = {
   "gayathri-gautam": {
-    names: "Gayathri Murali & Gautam Mylapur",
+    names: "Gayathri Murali &\nGautam Mylapur",
     brideName: "Gayathri Murali",
     groomName: "Gautam Mylapur",
     date: "19 & 20 January",
