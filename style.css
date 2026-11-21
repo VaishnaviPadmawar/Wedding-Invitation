@@ -361,38 +361,41 @@ article p {
 .firework-burst {
   position: fixed;
   z-index: 1000;
-  width: 2px;
-  height: 2px;
+  width: 0;
+  height: 0;
   pointer-events: none;
 }
 
 .firework-burst span {
   position: absolute;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #d8a72e;
-  box-shadow: 0 0 14px #f3d778;
-  animation: firework-spark 1.65s ease-out forwards;
+  bottom: 0;
+  left: -4px;
+  width: 8px;
+  height: var(--distance);
+  color: #e3b72e;
+  background: radial-gradient(circle, currentColor 0 3px, transparent 3.7px) center bottom / 8px 15px repeat-y;
+  filter: drop-shadow(0 0 5px currentColor);
+  transform: rotate(var(--angle)) scaleY(.08);
+  transform-origin: 50% 100%;
+  animation: firework-ray 1.9s cubic-bezier(.12, .68, .2, 1) forwards;
 }
 
 .firework-burst span:nth-child(3n) {
-  background: #8a2630;
-  box-shadow: 0 0 8px #d98695;
+  color: #e76d82;
 }
 
 .firework-burst span:nth-child(4n) {
-  background: #fff4b6;
+  color: #fff1a1;
 }
 
-@keyframes firework-spark {
+@keyframes firework-ray {
   from {
-    opacity: 1;
-    transform: rotate(var(--angle)) translateX(0) scale(1);
+    opacity: .95;
+    transform: rotate(var(--angle)) scaleY(.08);
   }
   to {
     opacity: 0;
-    transform: rotate(var(--angle)) translateX(var(--distance)) scale(.2);
+    transform: rotate(var(--angle)) scaleY(1);
   }
 }
 

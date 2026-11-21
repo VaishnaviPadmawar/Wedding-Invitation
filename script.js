@@ -54,12 +54,12 @@ document.querySelector("#events-list").innerHTML =
 
 document.querySelectorAll(".fireworks-button").forEach(button => {
   button.addEventListener("click", () => {
-    for (let burst = 0; burst < 16; burst += 1) {
+    for (let burst = 0; burst < 22; burst += 1) {
       window.setTimeout(() => {
-        const x = 5 + Math.random() * 90;
-        const y = 5 + Math.random() * 75;
+        const x = Math.random() * 100;
+        const y = 5 + Math.random() * 85;
         createFirework(window.innerWidth * x / 100, window.innerHeight * y / 100);
-      }, burst * 110);
+      }, burst * 75);
     }
   });
 });
@@ -71,16 +71,19 @@ function createFirework(centerX, centerY) {
   burst.style.top = `${centerY}px`;
   document.body.appendChild(burst);
 
-  for (let i = 0; i < 32; i += 1) {
-    const spark = document.createElement("span");
-    const angle = (360 / 32) * i;
-    const distance = 140 + Math.random() * 180;
-    spark.style.setProperty("--angle", `${angle}deg`);
-    spark.style.setProperty("--distance", `${distance}px`);
-    burst.appendChild(spark);
+  const rayCount = 40;
+  const screenSize = Math.min(window.innerWidth, window.innerHeight);
+
+  for (let i = 0; i < rayCount; i += 1) {
+    const ray = document.createElement("span");
+    const angle = (360 / rayCount) * i + (Math.random() - 0.5) * 5;
+    const distance = screenSize * (0.42 + Math.random() * 0.42);
+    ray.style.setProperty("--angle", `${angle}deg`);
+    ray.style.setProperty("--distance", `${distance}px`);
+    burst.appendChild(ray);
   }
 
-  window.setTimeout(() => burst.remove(), 1800);
+  window.setTimeout(() => burst.remove(), 2100);
 }
 
 const openButton = document.querySelector("#open-button");
