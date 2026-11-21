@@ -335,15 +335,17 @@ article p {
   width: 100%;
   min-height: 76px;
   margin-top: 20px;
-  padding: 12px 22px;
+  padding: 12px 8px;
+  gap: 8px;
   border: 0;
   border-radius: 999px;
   color: #6f4d19;
   background: #f5c95f;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1rem, 3vw, 1.35rem);
-  letter-spacing: .12em;
+  font-size: clamp(.78rem, 1.3vw, 1.1rem);
+  letter-spacing: .05em;
   text-transform: uppercase;
+  white-space: nowrap;
   box-shadow: 0 8px 18px rgba(201, 162, 78, .22);
 }
 
@@ -358,45 +360,13 @@ article p {
   transform: translateY(-2px);
 }
 
-.firework-burst {
+.fireworks-canvas {
   position: fixed;
+  inset: 0;
   z-index: 1000;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-}
-
-.firework-burst span {
-  position: absolute;
-  bottom: 0;
-  left: -4px;
-  width: 8px;
-  height: var(--distance);
-  color: #e3b72e;
-  background: radial-gradient(circle, currentColor 0 3px, transparent 3.7px) center bottom / 8px 15px repeat-y;
-  filter: drop-shadow(0 0 5px currentColor);
-  transform: rotate(var(--angle)) scaleY(.08);
-  transform-origin: 50% 100%;
-  animation: firework-ray 1.9s cubic-bezier(.12, .68, .2, 1) forwards;
-}
-
-.firework-burst span:nth-child(3n) {
-  color: #e76d82;
-}
-
-.firework-burst span:nth-child(4n) {
-  color: #fff1a1;
-}
-
-@keyframes firework-ray {
-  from {
-    opacity: .95;
-    transform: rotate(var(--angle)) scaleY(.08);
-  }
-  to {
-    opacity: 0;
-    transform: rotate(var(--angle)) scaleY(1);
-  }
 }
 
 #families {
