@@ -333,22 +333,23 @@ article p {
 
 .fireworks-button {
   width: 100%;
-  min-height: 62px;
+  min-height: 76px;
   margin-top: 20px;
+  padding: 12px 22px;
   border: 0;
   border-radius: 999px;
   color: #6f4d19;
   background: #f5c95f;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(.88rem, 2.5vw, 1.08rem);
-  letter-spacing: .08em;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  letter-spacing: .12em;
   text-transform: uppercase;
   box-shadow: 0 8px 18px rgba(201, 162, 78, .22);
 }
 
 .fireworks-button span {
   color: #8a2630;
-  font-size: 1.25rem;
+  font-size: 1.55rem;
 }
 
 .fireworks-button:hover {
@@ -367,12 +368,12 @@ article p {
 
 .firework-burst span {
   position: absolute;
-  width: 7px;
-  height: 7px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: #d8a72e;
-  box-shadow: 0 0 8px #f3d778;
-  animation: firework-spark .85s ease-out forwards;
+  box-shadow: 0 0 14px #f3d778;
+  animation: firework-spark 1.65s ease-out forwards;
 }
 
 .firework-burst span:nth-child(3n) {

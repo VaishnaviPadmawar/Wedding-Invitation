@@ -54,12 +54,12 @@ document.querySelector("#events-list").innerHTML =
 
 document.querySelectorAll(".fireworks-button").forEach(button => {
   button.addEventListener("click", () => {
-    for (let burst = 0; burst < 10; burst += 1) {
+    for (let burst = 0; burst < 16; burst += 1) {
       window.setTimeout(() => {
-        const x = 12 + Math.random() * 76;
-        const y = 8 + Math.random() * 72;
+        const x = 5 + Math.random() * 90;
+        const y = 5 + Math.random() * 75;
         createFirework(window.innerWidth * x / 100, window.innerHeight * y / 100);
-      }, burst * 140);
+      }, burst * 110);
     }
   });
 });
@@ -71,16 +71,16 @@ function createFirework(centerX, centerY) {
   burst.style.top = `${centerY}px`;
   document.body.appendChild(burst);
 
-  for (let i = 0; i < 18; i += 1) {
+  for (let i = 0; i < 32; i += 1) {
     const spark = document.createElement("span");
-    const angle = (360 / 18) * i;
-    const distance = 55 + Math.random() * 35;
+    const angle = (360 / 32) * i;
+    const distance = 140 + Math.random() * 180;
     spark.style.setProperty("--angle", `${angle}deg`);
     spark.style.setProperty("--distance", `${distance}px`);
     burst.appendChild(spark);
   }
 
-  window.setTimeout(() => burst.remove(), 1100);
+  window.setTimeout(() => burst.remove(), 1800);
 }
 
 const openButton = document.querySelector("#open-button");
