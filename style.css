@@ -332,31 +332,32 @@ article p {
 }
 
 .fireworks-button {
-  width: 100%;
-  min-height: 76px;
-  margin-top: 20px;
-  padding: 12px 8px;
-  gap: 8px;
-  border: 0;
+  display: flex;
+  width: fit-content;
+  min-height: 42px;
+  margin: 16px auto 0;
+  padding: 8px 16px;
+  gap: 7px;
+  border: 1px solid var(--rose);
   border-radius: 999px;
-  color: #6f4d19;
-  background: #f5c95f;
+  color: var(--rose-dark);
+  background: var(--white);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(.78rem, 1.3vw, 1.1rem);
-  letter-spacing: .05em;
+  font-size: .75rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
   white-space: nowrap;
-  box-shadow: 0 8px 18px rgba(201, 162, 78, .22);
+  box-shadow: 0 4px 12px rgba(91, 26, 32, .08);
 }
 
 .fireworks-button span {
-  color: #8a2630;
-  font-size: 1.55rem;
+  color: var(--rose);
+  font-size: 1rem;
 }
 
 .fireworks-button:hover {
-  color: #6f4d19;
-  background: #f2d279;
+  color: var(--rose-dark);
+  background: #f4e9e6;
   transform: translateY(-2px);
 }
 
