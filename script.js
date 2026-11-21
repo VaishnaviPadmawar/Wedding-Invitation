@@ -69,15 +69,15 @@ function createFirework() {
 
   for (let index = 0; index < 44; index += 1) {
     const angle = (Math.PI * 2 * index) / 44 + (Math.random() - 0.5) * 0.12;
-    const speed = 2.5 + Math.random() * 5;
+    const speed = 3.5 + Math.random() * 6;
     fireworksParticles.push({
       x: originX,
       y: originY,
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
       alpha: 1,
-      gravity: 0.045,
-      decay: 0.012 + Math.random() * 0.008,
+      gravity: 0.055,
+      decay: 0.018 + Math.random() * 0.01,
       color: colors[Math.floor(Math.random() * colors.length)],
       size: 1.5 + Math.random() * 2.2
     });
@@ -111,8 +111,9 @@ function animateFireworks() {
 }
 
 function lightTheFireworks() {
-  for (let burst = 0; burst < 7; burst += 1) {
-    window.setTimeout(createFirework, burst * 170);
+  createFirework();
+  for (let burst = 1; burst < 7; burst += 1) {
+    window.setTimeout(createFirework, burst * 110);
   }
   if (fireworksAnimationId === null) {
     fireworksAnimationId = window.requestAnimationFrame(animateFireworks);
