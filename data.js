@@ -55,7 +55,8 @@ window.WEDDINGS = {
         name: "Reception",
         date: "23 January",
         time: "6:00 pm onwards",
-        venue: "receptionVenue"
+        venue: "receptionVenue",
+        fireworks: true
       }
     ],
 
