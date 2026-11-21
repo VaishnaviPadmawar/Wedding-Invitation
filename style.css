@@ -270,6 +270,22 @@ a:focus-visible {
   overflow-wrap: anywhere;
 }
 
+.couple-portrait {
+  width: 150px;
+  height: 150px;
+  margin: 18px auto 12px;
+  border-radius: 50%;
+  background: #fbf8f1;
+  overflow: hidden;
+}
+
+.couple-portrait svg,
+.couple-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 #events-list,
 #families-list {
   display: grid;
@@ -315,6 +331,70 @@ article p {
   text-underline-offset: 3px;
 }
 
+.fireworks-button {
+  width: 100%;
+  min-height: 62px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 999px;
+  color: #6f4d19;
+  background: #f5c95f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(.88rem, 2.5vw, 1.08rem);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(201, 162, 78, .22);
+}
+
+.fireworks-button span {
+  color: #8a2630;
+  font-size: 1.25rem;
+}
+
+.fireworks-button:hover {
+  color: #6f4d19;
+  background: #f2d279;
+  transform: translateY(-2px);
+}
+
+.firework-burst {
+  position: fixed;
+  z-index: 1000;
+  width: 2px;
+  height: 2px;
+  pointer-events: none;
+}
+
+.firework-burst span {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d8a72e;
+  box-shadow: 0 0 8px #f3d778;
+  animation: firework-spark .85s ease-out forwards;
+}
+
+.firework-burst span:nth-child(3n) {
+  background: #8a2630;
+  box-shadow: 0 0 8px #d98695;
+}
+
+.firework-burst span:nth-child(4n) {
+  background: #fff4b6;
+}
+
+@keyframes firework-spark {
+  from {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateX(var(--distance)) scale(.2);
+  }
+}
+
 #families {
   width: 100%;
   max-width: none;
@@ -327,6 +407,27 @@ article p {
   width: min(100%, 1072px);
   margin-right: auto;
   margin-left: auto;
+}
+
+.family-card {
+  text-align: center;
+}
+
+.family-portrait {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 18px;
+  border: 1px solid #e2cfaa;
+  border-radius: 50%;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.family-portrait img,
+.family-portrait svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #venue {

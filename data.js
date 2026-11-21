@@ -3,6 +3,10 @@ window.WEDDINGS = {
     names: "Gayathri Murali &\nGautam Mylapur",
     brideName: "Gayathri Murali",
     groomName: "Gautam Mylapur",
+    groomShortName: "Gautam Mylapur",
+    familyLocation: "HALDWANI, UTTARAKHAND",
+    familyHost: "Smt. Savita & Shri Rajendra Kumar Lumba",
+    familyDescription: "Grandson of Late Shri Brij Mohan Lumba & Late Smt. Chanchal Lumba\nBrother of Ahtin Gumber & Neha Gumber\nBeloved by his loving family and cherished by his near and dear relatives",
     date: "19 & 20 January",
 
     families: [
