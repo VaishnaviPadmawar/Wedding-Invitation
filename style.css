@@ -271,8 +271,8 @@ a:focus-visible {
 }
 
 .couple-portrait {
-  width: 150px;
-  height: 150px;
+  width: min(100%, 150px);
+  aspect-ratio: 1;
   margin: 18px auto 12px;
   border-radius: 50%;
   background: #fbf8f1;
