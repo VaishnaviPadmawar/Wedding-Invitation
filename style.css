@@ -503,7 +503,8 @@ article p {
   }
 
   .couple-grid {
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 16px;
     margin-top: 24px;
   }
 
